@@ -167,29 +167,39 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterBtns = document.querySelectorAll(".filter-btn");
 
   // Generate portfolio items
-  function generatePortfolioItems(items) {
-    portfolioGrid.innerHTML = "";
+ function generatePortfolioItems(items) {
+  portfolioGrid.innerHTML = "";
 
-    items.forEach(item => {
-      const portfolioItem = document.createElement("div");
-      portfolioItem.classList.add("portfolio-item");
-      portfolioItem.dataset.category = item.category;
+  items.forEach(item => {
+    const portfolioItem = document.createElement("div");
+    portfolioItem.classList.add("portfolio-item");
+    portfolioItem.dataset.category = item.category;
 
-      portfolioItem.innerHTML = `
-        <img src="${item.image}" alt="${item.title}">
-        <div class="portfolio-overlay">
-          <h3>${item.title}</h3>
-          <p>${item.description}</p>
-          <div class="portfolio-links">
-            <a href="${item.githubLink}" target="_blank" class="portfolio-link"><i class="fab fa-github"></i> Code</a>
-            <a href="${item.previewLink}" target="_blank" class="portfolio-link"><i class="fas fa-external-link-alt"></i> Preview</a>
-          </div>
+    portfolioItem.innerHTML = `
+      <img src="${item.image}" alt="${item.title}">
+      <div class="portfolio-overlay">
+        <h3>${item.title}</h3>
+        <p>${item.description}</p>
+        <div class="portfolio-links">
+          <a href="${item.githubLink}" target="_blank" class="portfolio-link"><i class="fab fa-github"></i> Code</a>
+          <a href="${item.previewLink}" target="_blank" class="portfolio-link"><i class="fas fa-external-link-alt"></i> Preview</a>
         </div>
-      `;
+      </div>
+    `;
 
-      portfolioGrid.appendChild(portfolioItem);
+    // Add event listeners to the links
+    const links = portfolioItem.querySelectorAll('.portfolio-link');
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log("Link clicked:", link.href); // Log the URL
+        window.open(link.href, "_blank"); // Force open in a new tab
+      });
     });
-  }
+
+    portfolioGrid.appendChild(portfolioItem);
+  });
+}
 
   function getCategory(category) {
     switch (category) {
