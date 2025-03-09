@@ -797,6 +797,9 @@ nav a.active::after {
 .portfolio-item:hover .portfolio-overlay p {
   transform: translateY(0);
 }
+.portfolio-links a {
+  pointer-events: auto !important;
+}
 
 .portfolio-links {
   display: flex;
