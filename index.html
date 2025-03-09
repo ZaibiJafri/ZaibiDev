@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zohaib Hassan | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="loader" id="loader">
+    <div class="spinner"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+
+    <div class="loader-text">Loading<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></div>
+  </div>
+  
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <header>
+    <div class="container">
+      <div class="logo">Zaibi<span>Dev</span></div>
+      <nav>
+        <ul>
+          <li><a href="#services" class="active">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact" class="cta-button">Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div id="particles-js"></div>
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="text-reveal-container">
+          <h1>Turning <span class="gradient-text animated">Ideas</span> Into <span class="gradient-text animated">Digital Reality</span></h1>
+        </div>
+        <p class="fade-in typewriter">Professional creative services tailored to elevate your brand and captivate your audience.</p>
+        <div class="cta-buttons fade-in">
+          <a href="#portfolio" class="primary-button">
+            <span class="button-text">View My Work</span>
+            <span class="button-icon"><i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="#contact" class="secondary-button">
+            <span class="button-text">Get In Touch</span>
+            <span class="button-icon"><i class="fas fa-envelope"></i></span>
+          </a>
+        </div>
+        <div class="scroll-indicator">
+          <span>Scroll to explore</span>
+          <div class="mouse-scroll">
+            <div class="mouse">
+              <div class="wheel"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>My Services</h2>
+        <p>Comprehensive creative solutions to help your business thrive</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-paint-brush"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Creating intuitive, engaging user experiences that keep your customers coming back.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Building responsive, fast-loading websites optimized for all devices and search engines.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-bullhorn"></i></div>
+          <h3>Brand Strategy</h3>
+          <p>Developing cohesive brand identities that resonate with your target audience.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Digital Marketing</h3>
+          <p>Implementing strategies that increase visibility and drive meaningful engagement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <h2>Portfolio</h2>
+        <p>A showcase of my recent projects and creative work</p>
+      </div>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="ui">UI/UX</button>
+      </div>
+      <div class="portfolio-grid" id="portfolio-grid">
+        <!-- Portfolio items will be dynamically added via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>Client Testimonials</h2>
+        <p>What my clients are saying about my work</p>
+      </div>
+      <div class="testimonials-slider" id="testimonials-slider">
+        <!-- Testimonials will be dynamically added via JavaScript -->
+      </div>
+      <div class="slider-controls">
+        <button id="prev-testimonial"><i class="fas fa-arrow-left"></i></button>
+        <button id="next-testimonial"><i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Let's Work Together</h2>
+        <p>Get in touch to discuss your project needs</p>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p>zaibii3514@gmail.com</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <h3>Phone</h3>
+            <p>+92 311 4414388</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Location</h3>
+            <p>Lahore, Pakistan</p>
+          </div>
+          <div class="social-links">
+            <a href="https://www.github.com/zaibijafri" target="_blank""><i class=" fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/zohaibhassan3514/""><i class=" fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required>
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" required>
+            <label for="email">Your Email</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" name="subject" required>
+            <label for="subject">Subject</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" required></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div id="countdown-banner">
+    <div class="container">
+      <div class="countdown-content">
+        <h3>Limited Time Offer</h3>
+        <p>20% off all projects booked in the next:</p>
+        <div id="countdown" class="countdown-timer"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="logo">Zaibi<span>dev</span></div>
+        <p>&copy; 2023 ZaibiDev. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
